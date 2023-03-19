@@ -39,5 +39,8 @@ jobs:
           # Upload entire repository
           path: './build'
       - name: Deploy to GitHub Pages
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+          MY_VAR: "Meowing? yes"
         id: deployment
         uses: actions/deploy-pages@v1
